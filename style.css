@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: black;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    background: wheat;
+    color: black;
+    transition: 0.3s;
+}
+button:hover{
+    transform: scale(1.05);
+}
+body.dark{
+    background-color: black;
+    color: white;
+}
+body.dark button{
+    background: black;
+    color: white;
+}
