@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News Dash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hacker<span>News</span></h1>
+            <div class="search-box">
+                <input type="text" id="newsInput" placeholder="Search tech, startups, coding...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <div id="loader" class="hidden">Fetching the latest tech stories...</div>
+        <div id="newsContainer" class="news-grid"></div>
+        <p id="errorMsg" class="error"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
