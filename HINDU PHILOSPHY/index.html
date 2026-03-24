@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindu Philosophy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hindu<span>Philosophy</span></h1>
+            <p>Wisdom from the Gita, Vedas, and Upanishads</p>
+        </header>
+
+        <div class="input-section">
+            <textarea id="userInput" placeholder="Ask a question about life, duty, or peace..."></textarea>
+            <button id="askBtn">Seek Wisdom</button>
+        </div>
+
+        <div id="loader" class="hidden">Consulting the scriptures...</div>
+
+        <div id="responseContainer" class="hidden">
+            <div class="response-card">
+                <h3>Scriptural Teaching</h3>
+                <p id="verseText"></p>
+                <hr>
+                <h3>Modern Meaning</h3>
+                <p id="meaningText"></p>
+                <hr>
+                <h3>Practical Guidance</h3>
+                <p id="guidanceText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
