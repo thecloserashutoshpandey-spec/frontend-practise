@@ -1,6 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// 1. Paste your key here
 const API_KEY = "AIzaSyDTn-o1HRKVKGhcvsjVC2yeXHL84ZN04Yk"; 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
@@ -13,15 +12,14 @@ async function getWisdom() {
     const question = userInput.value.trim();
     if (!question) return;
 
-    // UI Reset
-    loader.classList.remove("hidden");
+    loader.classList.remove("hidden")
     responseContainer.classList.add("hidden");
 
     try {
-        // Use gemini-1.5-flash - it's the standard for 2026
+
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         
-        // The "Brain" - Prompt Engineering
+
         const prompt = `You are a scholar of Hindu philosophy. 
         Answer the following question using wisdom from Bhagavad Gita, Upanishads, or Vedas.
         
@@ -36,8 +34,6 @@ async function getWisdom() {
         const response = await result.response;
         const text = response.text();
 
-        // Put the result into your boxes
-        // If the parsing is too hard, we just show the whole text for now:
         document.getElementById("meaningText").innerText = text;
         
         loader.classList.add("hidden");
@@ -52,7 +48,6 @@ async function getWisdom() {
 
 askBtn.addEventListener("click", getWisdom);
 
-// Handle Enter Key
 userInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
         e.preventDefault();
